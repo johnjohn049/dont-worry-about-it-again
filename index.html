@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Enter Bday</title>
+</head>
+<body>
+  <h2>Enter your Birthday!:</h2>
+
+  <input type="date" id="dateInput">
+  <button onclick="checkDate()">Submit</button>
+
+  <script>
+    function checkDate() {
+      const inputDate = document.getElementById('dateInput').value;
+      
+      // Format: YYYY-MM-DD
+      const secretDate = "2011-08-28"; // ""
+
+      if (inputDate === secretDate) {
+        window.location.href = "secret-page.html"; // ✅ Redirect target
+      } else {
+        alert("Wrong date! Try again.");
+      }
+    }
+  </script>
+
+</body>
+</html>
