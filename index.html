@@ -1,9 +1,56 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Enter Bday</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f2f2f2;
+    }
+
+    h2 {
+      font-size: 3vw;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    input[type="date"] {
+      padding: 10px;
+      font-size: 1.5vw;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.5vw;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    @media (max-width: 600px) {
+      h2, input[type="date"], button {
+        font-size: 5vw;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h2>Enter your Birthday!:</h2>
+
+  <h2>Enter your Birthday! 🎉</h2>
 
   <input type="date" id="dateInput">
   <button onclick="checkDate()">Submit</button>
@@ -11,12 +58,12 @@
   <script>
     function checkDate() {
       const inputDate = document.getElementById('dateInput').value;
-      
+
       // Format: YYYY-MM-DD
-      const secretDate = "2011-08-28"; // ""
+      const secretDate = "2011-08-28";
 
       if (inputDate === secretDate) {
-        window.location.href = "secret-page.html"; // ✅ Redirect target
+        window.location.href = "secret-page.html";
       } else {
         alert("Wrong date! Try again.");
       }
